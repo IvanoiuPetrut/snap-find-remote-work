@@ -1,11 +1,9 @@
-/* BELOW 1552PX*/
 @media (max-width: 97em) {
   .hero-section {
     max-width: 140rem;
   }
 }
 
-/* BELOW  1264PX*/
 @media (max-width: 79em) {
   .heading-primary {
     font-size: 8rem;
@@ -16,44 +14,76 @@
   }
 
   .heading-tertiary {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+
+  .jobs__job-listing {
+    padding: 0 4.8rem;
+  }
+
+  .pricing-card {
+    padding: 4rem 3.2rem;
+  }
+
+  .faq {
+    gap: 6.4rem;
   }
 }
 
-/* BELOW 1168PX */
 @media (max-width: 73em) {
   .heading-primary {
     font-size: 6.4rem;
   }
 
   .heading-tertiary {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .hero-section__description {
     font-size: 1.8rem;
+    width: 85%;
   }
 
   .grid--4-col {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .steps__step {
-    width: 65%;
-    justify-self: center;
+  .how-it-works__steps {
+    row-gap: 3.2rem;
   }
 
-  .job-listing__job {
-    width: 100%;
+  .jobs__job-listing {
+    padding: 0;
+  }
+
+  .grid.pricing {
+    grid-template-columns: 1fr;
+    max-width: 56rem;
+  }
+
+  .pricing-card--featured {
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+  }
+
+  .footer-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__row-1 {
+    grid-column: 1 / -1;
+  }
+
+  .footer__logos {
+    margin-bottom: 3.2rem;
+  }
+
+  .cta {
+    padding: 6.4rem;
   }
 }
 
-/* BELOW 1032PX */
 @media (max-width: 65em) {
-  /* .hero-section {
-    grid-template-columns: 2fr 1fr;
-  } */
-
   html {
     font-size: 56.25%;
   }
@@ -72,127 +102,169 @@
     height: 0;
   }
 
-  .tag-list__item {
-    font-size: 1rem;
+  .hero-card--top {
+    left: -4%;
   }
 
-  .company__name {
-    font-size: 1.4rem;
-  }
-
-  .company__job-time-post {
-    font-size: 1.2rem;
-  }
-}
-
-/* BELOW 900PX */
-@media (max-width: 57em) {
-  .heading-tertiary {
-    font-size: 1.4rem;
-  }
-
-  .header__nav {
-    background-color: hsl(0, 0%, 100%);
-  }
-
-  /* mobile nav */
-  .icon--nav[name="menu-outline"] {
-    display: block;
-  }
-
-  .header__nav {
-    background-color: hsl(0, 0%, 100%);
-    position: absolute;
-    top: 0;
+  .hero-card--bottom {
     right: 0;
-    width: 40%;
-    height: 100vh;
-
-    flex-direction: column;
-    /* justify-content: flex-start; */
-    align-items: flex-start;
-    /* gap: 4.8rem; */
-    padding: 3.2rem;
-
-    /* hide */
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-  }
-
-  .header {
-    position: relative;
-    justify-content: space-between;
-  }
-
-  .header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: hsla(0, 0%, 0%, 0.7);
-
-    /* hide */
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-  }
-
-  /* NAV OPENNING CLASS */
-  .nav--open.header::before,
-  .nav--open .header__nav {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-  }
-
-  .nav__menu {
-    flex-direction: column;
-    margin-top: 6.4rem;
-  }
-
-  .header__user-auth {
-    flex-direction: column;
-  }
-
-  .btn--auth {
-    background-color: hsl(0, 0%, 100%);
-  }
-
-  /* DROPDOWN FOR MOBILE IN NAV */
-
-  .header__nav li:hover .nav__sub-menu {
-    position: static;
-    /* to appear and behave like a display block */
-  }
-
-  /* MOVE OVER THE MOBILE NAV */
-  .btn--nav {
-    position: absolute;
-    right: 3.2rem;
-  }
-}
-
-/* BELLOW 800px */
-@media (max-width: 50em) {
-  .heading-primary {
-    text-align: center;
-    font-size: 7.2rem;
-    line-height: 1.3;
-  }
-
-  .heading-secondary {
-    font-size: 3.2rem;
   }
 
   .grid--3-col {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .testimonial {
+    flex-basis: 100%;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cta__form {
+    max-width: 56rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 57em) {
+  .header {
+    justify-content: space-between;
+    padding: 0 2.4rem;
+  }
+
+  .btn--nav {
+    display: block;
+  }
+
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 105;
+    width: min(36rem, 85%);
+    height: 100vh;
+    overflow-y: auto;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4.8rem;
+    padding: 9.6rem 3.2rem 4.8rem;
+
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.35s ease-in-out, visibility 0.35s;
+  }
+
+  .header::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 101;
+    background-color: hsla(0, 0%, 0%, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease-in-out;
+  }
+
+  .nav--open.header::before {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav--open .header__nav {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .header__nav ul.nav__menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header__nav ul li {
+    margin-right: 0;
+  }
+
+  .link--nav:link,
+  .link--nav:visited {
+    padding: 1.4rem 0;
+    font-size: 1.8rem;
+  }
+
+  .nav__sub-menu,
+  .header__nav li:hover .nav__sub-menu {
+    position: static;
+    display: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    box-shadow: none;
+    padding: 0.8rem 0 1.6rem 1.6rem;
+  }
+
+  .nav__item--open .nav__sub-menu,
+  .header__nav .nav__item--open:hover .nav__sub-menu {
+    display: block;
+  }
+
+  .nav__item--dropdown:hover .nav__chevron {
+    transform: none;
+  }
+
+  .nav__item--open .nav__chevron,
+  .nav__item--open:hover .nav__chevron {
+    transform: rotate(180deg);
+  }
+
+  .header__user-auth {
+    flex-direction: column;
+    width: 100%;
+    gap: 1.6rem;
+  }
+
+  .btn--auth {
+    padding: 1.4rem;
+  }
+
+  .faq {
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+  }
+
+  .footer-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__row-4 {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 50em) {
+  .heading-primary {
+    text-align: center;
+    font-size: 7.2rem;
+    line-height: 1.1;
+  }
+
+  .heading-secondary {
+    font-size: 3.2rem;
+  }
+
+  .section-header {
+    text-align: center;
+  }
+
   .hero-section {
     grid-template-columns: 1fr;
+    margin-bottom: 6.4rem;
   }
 
   .hero-section__image {
@@ -206,71 +278,133 @@
   }
 
   .hero-section__text-box {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+  }
+
+  .hero-section__badge {
+    align-self: center;
   }
 
   .hero-section__description {
     text-align: center;
+    width: 100%;
   }
 
-  .link--full {
-    margin: 0 auto;
+  .hero-section__actions {
+    justify-content: center;
   }
 
   .flex-break {
     flex-basis: 0;
   }
 
-  .steps__step {
-    width: 100%;
+  .hero-section__feature-in {
+    justify-content: center;
   }
 
-  .job-listing__job {
-    place-self: center;
-    width: 80%;
-  }
-
-  .job-listing__job:last-child {
-    grid-column: 1 / -1;
-    width: 40%;
-  }
-
-  .footer-section {
+  .stats {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer__row-3 {
-    grid-column: 1 / -1;
-    grid-row: 1;
+  .stats-section,
+  .how-it-works-section,
+  .features-section,
+  .jobs-section,
+  .testimonials-section,
+  .pricing-section,
+  .faq-section {
+    margin-bottom: 12.8rem;
   }
 
-  .footer__form input {
-    width: 60%;
+  .testimonial {
+    padding: 3.2rem;
   }
 
-  .btn--footer {
-    display: block;
+  .faq__intro {
+    text-align: center;
+  }
+
+  .cta__heading {
+    font-size: 3.2rem;
   }
 }
 
-/* BELLOW 580px */
 @media (max-width: 37em) {
-  .grid--3-col {
-    grid-template-columns: 1fr;
+  .container {
+    padding: 0 2.4rem;
   }
 
-  .job-listing__job {
-    width: 90%;
+  .hero-section {
+    padding: 2.4rem;
   }
 
-  .job-listing__job:last-child {
-    width: 90%;
+  .heading-primary {
+    font-size: 5.6rem;
   }
 
+  .heading-secondary {
+    font-size: 2.8rem;
+  }
+
+  .hero-section__image {
+    width: 100%;
+  }
+
+  .hero-card {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .hero-card--top {
+    left: 0;
+  }
+
+  .grid--3-col,
   .grid--4-col {
     grid-template-columns: 1fr;
     gap: 3.2rem;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats__number {
+    font-size: 3.6rem;
+  }
+
+  .filter-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.8rem;
+    scrollbar-width: none;
+  }
+
+  .filter-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .faq__question {
+    font-size: 1.7rem;
+  }
+
+  .faq__answer {
+    padding-right: 0;
+  }
+
+  .cta {
+    padding: 4.8rem 2.4rem;
+    border-radius: 2.4rem;
+  }
+
+  .footer-section {
+    grid-template-columns: 1fr;
+    margin: 6.4rem auto;
+  }
+
+  .back-to-top:link,
+  .back-to-top:visited {
+    right: 2rem;
+    bottom: 2rem;
   }
 }

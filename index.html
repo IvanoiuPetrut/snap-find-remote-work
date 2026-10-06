@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="snap helps you find remote work you love, keep your team in sync and get paid on time, wherever you are." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,91 +15,93 @@
   <link rel="stylesheet" href="styles/queries.css" />
 
   <title>snap &ndash; make remote work</title>
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
-  <!-- HEADER -->
   <header class="header">
-    <a href="#">
+    <a href="#top" class="header__logo-link">
       <img src="images/logo.svg" alt="snap logo" class="logo logo--main" />
     </a>
 
-    <nav class="header__nav">
+    <nav class="header__nav" id="main-nav">
       <ul class="nav__menu">
-        <li>
-          <a href="#" class="link link--nav">
+        <li class="nav__item nav__item--dropdown">
+          <a href="#features" class="link link--nav">
             Features
-            <ion-icon name="chevron-down-outline"></ion-icon>
+            <ion-icon name="chevron-down-outline" class="nav__chevron"></ion-icon>
           </a>
           <div class="nav__sub-menu">
             <ul class="sub-menu__list">
               <li>
                 <ion-icon name="list-sharp" class="icon--purple"></ion-icon>
-                <a href="" class="link link--drop-down">Todo List</a>
+                <a href="#features" class="link link--drop-down">Todo List</a>
               </li>
               <li>
                 <ion-icon name="calendar-sharp" class="icon--aqua"></ion-icon>
-                <a href="" class="link link--drop-down">Calendar</a>
+                <a href="#features" class="link link--drop-down">Calendar</a>
               </li>
               <li>
                 <ion-icon name="notifications-sharp" class="icon--yellow"></ion-icon>
-                <a href="" class="link link--drop-down">Reminders</a>
+                <a href="#features" class="link link--drop-down">Reminders</a>
               </li>
               <li>
-                <ion-icon name="time-sharp" class="icon--magenda"></ion-icon>
-                <a href="" class="link link--drop-down">Planning</a>
+                <ion-icon name="time-sharp" class="icon--magenta"></ion-icon>
+                <a href="#features" class="link link--drop-down">Planning</a>
               </li>
             </ul>
           </div>
         </li>
-        <li>
-          <a href="#" class="link link--nav">
+        <li class="nav__item nav__item--dropdown">
+          <a href="#testimonials" class="link link--nav">
             Company
-            <ion-icon name="chevron-down-outline"></ion-icon>
+            <ion-icon name="chevron-down-outline" class="nav__chevron"></ion-icon>
           </a>
           <div class="nav__sub-menu">
             <ul class="sub-menu__list">
               <li>
-                <a href="" class="link link--drop-down">History</a>
+                <a href="#how-it-works" class="link link--drop-down">History</a>
               </li>
               <li>
-                <a href="" class="link link--drop-down no-line-break">Our-Team</a>
+                <a href="#testimonials" class="link link--drop-down no-line-break">Our team</a>
               </li>
               <li>
-                <a href="" class="link link--drop-down">Blog</a>
+                <a href="#faq" class="link link--drop-down">Blog</a>
               </li>
             </ul>
           </div>
         </li>
-        <li>
+        <li class="nav__item">
           <a href="#how-it-works" class="link link--nav">How it works</a>
         </li>
-        <li>
+        <li class="nav__item">
           <a href="#jobs" class="link link--nav">Jobs</a>
         </li>
+        <li class="nav__item">
+          <a href="#pricing" class="link link--nav">Pricing</a>
+        </li>
       </ul>
-      
+
       <div class="header__user-auth">
         <button class="btn btn--auth">Login</button>
         <button class="btn btn--auth btn--register">Register</button>
       </div>
     </nav>
 
-    <button class="btn btn--nav">
+    <button class="btn btn--nav" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false">
       <ion-icon name="menu-outline" class="icon icon--nav"></ion-icon>
-    </button>
-    <button class="btn btn--nav">
       <ion-icon name="close-outline" class="icon icon--nav"></ion-icon>
     </button>
-
   </header>
 
-  <!-- MAIN -->
-  <main>
-    <!-- HERO SECTION -->
+  <main id="top">
     <section class="hero-section container">
-      <!-- HERO TEXT BOX -->
       <div class="hero-section__text-box">
+        <span class="hero-section__badge">
+          <span class="badge__dot"></span>
+          1,240 new remote jobs this week
+        </span>
+
         <h1 class="heading-primary">
           Find <br />
           remote work
@@ -109,150 +112,568 @@
           processes, create team rituals, and watch productivity soar.
         </p>
 
-        <a href="#" class="link link--full">Learn more</a>
+        <div class="hero-section__actions">
+          <a href="#how-it-works" class="link link--full">Learn more</a>
+          <a href="#jobs" class="link link--outline">Browse jobs &rarr;</a>
+        </div>
 
+        <p class="hero-section__trusted">Trusted by teams at</p>
         <div class="hero-section__feature-in">
-          <img src="images/client-databiz.svg" alt="databiz logo" class="logo" />
-          <img src="images/client-audiophile.svg" alt="audi phile logo" class="logo" />
+          <img src="images/client-databiz.svg" alt="Databiz logo" class="logo" />
+          <img src="images/client-audiophile.svg" alt="Audiophile logo" class="logo" />
           <div class="flex-break"></div>
-          <img src="images/client-meet.svg" alt="mett logo" class="logo" />
-          <img src="images/client-maker.svg" alt="maker logo" class="logo" />
+          <img src="images/client-meet.svg" alt="Meet logo" class="logo" />
+          <img src="images/client-maker.svg" alt="Maker logo" class="logo" />
         </div>
       </div>
 
-      <!-- HERO IMG -->
       <div class="hero-section__image">
-        <img src="images/image-hero-desktop.png" alt="A man using laptop to fin remote work" class="hero--img">
+        <img src="images/image-hero-desktop.png" alt="A man using a laptop to find remote work" class="hero--img">
+        <div class="hero-card hero-card--top">
+          <ion-icon name="checkmark-circle" class="icon--aqua"></ion-icon>
+          <div>
+            <p class="hero-card__title">Offer accepted</p>
+            <p class="hero-card__text">Product Designer &middot; Remote</p>
+          </div>
+        </div>
+        <div class="hero-card hero-card--bottom">
+          <ion-icon name="people" class="icon--purple"></ion-icon>
+          <div>
+            <p class="hero-card__title">+320 hires</p>
+            <p class="hero-card__text">this month</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- HOW IT WORKS SECTION -->
+    <section class="stats-section">
+      <div class="container stats grid grid--4-col">
+        <div class="stats__item reveal">
+          <p class="stats__number"><span data-target="12000">0</span>+</p>
+          <p class="stats__label">Remote jobs posted</p>
+        </div>
+        <div class="stats__item reveal">
+          <p class="stats__number"><span data-target="3500">0</span>+</p>
+          <p class="stats__label">Hiring companies</p>
+        </div>
+        <div class="stats__item reveal">
+          <p class="stats__number"><span data-target="90">0</span>+</p>
+          <p class="stats__label">Countries worldwide</p>
+        </div>
+        <div class="stats__item reveal">
+          <p class="stats__number"><span data-target="98">0</span>%</p>
+          <p class="stats__label">Happy freelancers</p>
+        </div>
+      </div>
+    </section>
+
     <section id="how-it-works" class="how-it-works-section">
-      <div class="container">
+      <div class="container section-header">
         <p class="section-name">How it works</p>
         <h2 class="heading-secondary">Land your dream job in 4 easy steps</h2>
       </div>
 
-      <!-- STEP ELEMENTS -->
       <div class="how-it-works__steps container grid grid--4-col">
-        <!-- STEP 1 -->
-        <div class="steps__step">
+        <div class="steps__step reveal">
+          <span class="step__number">01</span>
           <ion-icon name="person-sharp" class="icon icon--big icon--purple"></ion-icon>
-          <h4 class="heading-tertiary">Build your profile</h4>
+          <h3 class="heading-tertiary">Build your profile</h3>
           <p class="step__paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            minima delectus nihil quos atque dolorem?
+            Showcase your skills, portfolio and availability in minutes so
+            the right companies can find you first.
           </p>
-          <a href="#" class="link link--how-it-works link--underline">Sign Up now &rarr;</a>
+          <a href="#cta" class="link link--how-it-works link--underline">Sign up now &rarr;</a>
         </div>
 
-        <!-- STEP 2 -->
-        <div class="steps__step">
-          <ion-icon name="search-sharp" class="icon icon--big icon--magenda"></ion-icon>
-          <h4 class="heading-tertiary">Apply for jobs</h4>
+        <div class="steps__step reveal">
+          <span class="step__number">02</span>
+          <ion-icon name="search-sharp" class="icon icon--big icon--magenta"></ion-icon>
+          <h3 class="heading-tertiary">Apply for jobs</h3>
           <p class="step__paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            minima delectus nihil quos atque dolorem?
+            Filter thousands of verified remote roles by category, salary
+            and time zone, then apply with a single click.
           </p>
-          <a href="#" class="link link--how-it-works link--underline">Jobs &rarr;</a>
+          <a href="#jobs" class="link link--how-it-works link--underline">Jobs &rarr;</a>
         </div>
 
-        <!-- STEP 3 -->
-        <div class="steps__step">
+        <div class="steps__step reveal">
+          <span class="step__number">03</span>
           <ion-icon name="briefcase-sharp" class="icon icon--big icon--aqua"></ion-icon>
-          <h4 class="heading-tertiary">Start working</h4>
+          <h3 class="heading-tertiary">Start working</h3>
           <p class="step__paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            minima delectus nihil quos atque dolorem?
+            Plan your week, track tasks and stay in sync with your new team
+            using our built-in productivity tools.
           </p>
-          <a href="#" class="link link--how-it-works link--underline">Work process &rarr;</a>
+          <a href="#features" class="link link--how-it-works link--underline">Work process &rarr;</a>
         </div>
 
-        <!-- STEP 4 -->
-        <div class="steps__step">
+        <div class="steps__step reveal">
+          <span class="step__number">04</span>
           <ion-icon name="wallet-sharp" class="icon icon--big icon--yellow"></ion-icon>
-          <h4 class="heading-tertiary">Get paid</h4>
+          <h3 class="heading-tertiary">Get paid</h3>
           <p class="step__paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            minima delectus nihil quos atque dolorem?
+            Receive secure payments in your local currency, on time, with
+            transparent fees and no surprises.
           </p>
-          <a href="#" class="link link--how-it-works link--underline">Payment methods &rarr;</a>
+          <a href="#pricing" class="link link--how-it-works link--underline">Payment methods &rarr;</a>
         </div>
       </div>
     </section>
 
-    <!-- JOBS SECTIONS -->
+    <section id="features" class="features-section">
+      <div class="container section-header">
+        <p class="section-name">Features</p>
+        <h2 class="heading-secondary">Everything your remote day needs</h2>
+      </div>
+
+      <div class="container grid grid--4-col features">
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--purple">
+            <img src="images/icon-todo.svg" alt="" />
+          </div>
+          <h3 class="heading-tertiary">Todo list</h3>
+          <p class="feature-card__text">Break projects into tasks, set priorities and check them off together with your team.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--aqua">
+            <img src="images/icon-calendar.svg" alt="" />
+          </div>
+          <h3 class="heading-tertiary">Calendar</h3>
+          <p class="feature-card__text">See meetings across time zones at a glance and find the perfect slot for everyone.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--yellow">
+            <img src="images/icon-reminders.svg" alt="" />
+          </div>
+          <h3 class="heading-tertiary">Reminders</h3>
+          <p class="feature-card__text">Never miss a deadline, interview or invoice with smart, gentle notifications.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--magenta">
+            <img src="images/icon-planning.svg" alt="" />
+          </div>
+          <h3 class="heading-tertiary">Planning</h3>
+          <p class="feature-card__text">Map out sprints and milestones so the whole team knows what comes next.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="jobs" class="jobs-section">
-      <div class="container">
+      <div class="container section-header">
         <p class="section-name">Jobs</p>
         <h2 class="heading-secondary">
           Find a job you love. Remote. Anytime.
         </h2>
       </div>
 
-      <!-- JOBS LIST -->
+      <div class="container">
+        <ul class="filter-list" role="tablist">
+          <li><button class="filter-btn filter-btn--active" data-filter="all" role="tab" aria-selected="true">All</button></li>
+          <li><button class="filter-btn" data-filter="engineering" role="tab" aria-selected="false">Engineering</button></li>
+          <li><button class="filter-btn" data-filter="design" role="tab" aria-selected="false">Design</button></li>
+          <li><button class="filter-btn" data-filter="marketing" role="tab" aria-selected="false">Marketing</button></li>
+          <li><button class="filter-btn" data-filter="product" role="tab" aria-selected="false">Product</button></li>
+          <li><button class="filter-btn" data-filter="support" role="tab" aria-selected="false">Support</button></li>
+        </ul>
+      </div>
+
       <div class="jobs__job-listing container grid grid--3-col">
-        <!-- JOB 1 -->
-        <div class="job-listing__job">
-          <h4 class="heading-tertiary">
-            Frontend Developer for Growing Marketplace
-          </h4>
+        <article class="job-listing__job" data-category="engineering">
+          <div class="job__top">
+            <h3 class="heading-tertiary">Frontend Developer for Growing Marketplace</h3>
+            <button class="btn btn--bookmark" aria-label="Save job" aria-pressed="false">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </button>
+          </div>
           <ul class="tag-list">
             <li class="tag-list__item tag-list__item--purple">Entry level</li>
             <li class="tag-list__item tag-list__item--yellow">Full time</li>
           </ul>
-          <div class="job__company">
-            <ion-icon name="logo-microsoft" class="icon company__icon"></ion-icon>
-            <div>
-              <p class="company__name">Microsoft</p>
-              <p class="company__job-time-post">3 days ago</p>
+          <ul class="job__meta">
+            <li><ion-icon name="location-outline"></ion-icon> Remote &middot; EU</li>
+            <li><ion-icon name="cash-outline"></ion-icon> $55k &ndash; $70k</li>
+          </ul>
+          <div class="job__bottom">
+            <div class="job__company">
+              <ion-icon name="logo-microsoft" class="icon company__icon"></ion-icon>
+              <div>
+                <p class="company__name">Microsoft</p>
+                <p class="company__job-time-post">3 days ago</p>
+              </div>
             </div>
+            <a href="#cta" class="link link--apply">Apply</a>
           </div>
-        </div>
+        </article>
 
-        <!-- JOB 2 -->
-        <div class="job-listing__job">
-          <h4 class="heading-tertiary">
-            Frontend Developer for Growing Marketplace
-          </h4>
+        <article class="job-listing__job" data-category="engineering">
+          <div class="job__top">
+            <h3 class="heading-tertiary">Senior Backend Engineer, Payments</h3>
+            <button class="btn btn--bookmark" aria-label="Save job" aria-pressed="false">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </button>
+          </div>
           <ul class="tag-list">
-            <li class="tag-list__item tag-list__item--magenta">
-              Senior level
-            </li>
+            <li class="tag-list__item tag-list__item--magenta">Senior level</li>
             <li class="tag-list__item tag-list__item--yellow">Full time</li>
           </ul>
-          <div class="job__company">
-            <ion-icon name="logo-facebook" class="icon company__icon"></ion-icon>
-            <div>
-              <p class="company__name">Facebook</p>
-              <p class="company__job-time-post">3 days ago</p>
+          <ul class="job__meta">
+            <li><ion-icon name="location-outline"></ion-icon> Remote &middot; Worldwide</li>
+            <li><ion-icon name="cash-outline"></ion-icon> $120k &ndash; $150k</li>
+          </ul>
+          <div class="job__bottom">
+            <div class="job__company">
+              <ion-icon name="logo-facebook" class="icon company__icon"></ion-icon>
+              <div>
+                <p class="company__name">Facebook</p>
+                <p class="company__job-time-post">1 day ago</p>
+              </div>
             </div>
+            <a href="#cta" class="link link--apply">Apply</a>
           </div>
-        </div>
+        </article>
 
-        <!-- JOB 3 -->
-        <div class="job-listing__job">
-          <h4 class="heading-tertiary">
-            Frontend Developer for Growing Marketplace
-          </h4>
+        <article class="job-listing__job" data-category="design">
+          <div class="job__top">
+            <h3 class="heading-tertiary">Product Designer for Shopping Experience</h3>
+            <button class="btn btn--bookmark" aria-label="Save job" aria-pressed="false">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </button>
+          </div>
           <ul class="tag-list">
-            <li class="tag-list__item tag-list__item--purple">
-              Entry level
-            </li>
+            <li class="tag-list__item tag-list__item--purple">Mid level</li>
             <li class="tag-list__item tag-list__item--aqua">Part time</li>
           </ul>
-          <div class="job__company">
-            <ion-icon name="logo-amazon" class="icon company__icon"></ion-icon>
-            <div>
-              <p class="company__name">Amazon</p>
-              <p class="company__job-time-post">3 days ago</p>
+          <ul class="job__meta">
+            <li><ion-icon name="location-outline"></ion-icon> Remote &middot; US</li>
+            <li><ion-icon name="cash-outline"></ion-icon> $45 &ndash; $60 / hr</li>
+          </ul>
+          <div class="job__bottom">
+            <div class="job__company">
+              <ion-icon name="logo-amazon" class="icon company__icon"></ion-icon>
+              <div>
+                <p class="company__name">Amazon</p>
+                <p class="company__job-time-post">3 days ago</p>
+              </div>
             </div>
+            <a href="#cta" class="link link--apply">Apply</a>
+          </div>
+        </article>
+
+        <article class="job-listing__job" data-category="marketing">
+          <div class="job__top">
+            <h3 class="heading-tertiary">Content Marketing Manager</h3>
+            <button class="btn btn--bookmark" aria-label="Save job" aria-pressed="false">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </button>
+          </div>
+          <ul class="tag-list">
+            <li class="tag-list__item tag-list__item--magenta">Senior level</li>
+            <li class="tag-list__item tag-list__item--yellow">Full time</li>
+          </ul>
+          <ul class="job__meta">
+            <li><ion-icon name="location-outline"></ion-icon> Remote &middot; EMEA</li>
+            <li><ion-icon name="cash-outline"></ion-icon> $80k &ndash; $95k</li>
+          </ul>
+          <div class="job__bottom">
+            <div class="job__company">
+              <ion-icon name="logo-slack" class="icon company__icon"></ion-icon>
+              <div>
+                <p class="company__name">Slack</p>
+                <p class="company__job-time-post">5 days ago</p>
+              </div>
+            </div>
+            <a href="#cta" class="link link--apply">Apply</a>
+          </div>
+        </article>
+
+        <article class="job-listing__job" data-category="product">
+          <div class="job__top">
+            <h3 class="heading-tertiary">Product Manager, Growth Team</h3>
+            <button class="btn btn--bookmark" aria-label="Save job" aria-pressed="false">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </button>
+          </div>
+          <ul class="tag-list">
+            <li class="tag-list__item tag-list__item--purple">Mid level</li>
+            <li class="tag-list__item tag-list__item--yellow">Full time</li>
+          </ul>
+          <ul class="job__meta">
+            <li><ion-icon name="location-outline"></ion-icon> Remote &middot; Americas</li>
+            <li><ion-icon name="cash-outline"></ion-icon> $110k &ndash; $130k</li>
+          </ul>
+          <div class="job__bottom">
+            <div class="job__company">
+              <ion-icon name="logo-google" class="icon company__icon"></ion-icon>
+              <div>
+                <p class="company__name">Google</p>
+                <p class="company__job-time-post">Today</p>
+              </div>
+            </div>
+            <a href="#cta" class="link link--apply">Apply</a>
+          </div>
+        </article>
+
+        <article class="job-listing__job" data-category="design">
+          <div class="job__top">
+            <h3 class="heading-tertiary">UI Designer for Music Streaming App</h3>
+            <button class="btn btn--bookmark" aria-label="Save job" aria-pressed="false">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </button>
+          </div>
+          <ul class="tag-list">
+            <li class="tag-list__item tag-list__item--purple">Entry level</li>
+            <li class="tag-list__item tag-list__item--aqua">Contract</li>
+          </ul>
+          <ul class="job__meta">
+            <li><ion-icon name="location-outline"></ion-icon> Remote &middot; Worldwide</li>
+            <li><ion-icon name="cash-outline"></ion-icon> $40 &ndash; $55 / hr</li>
+          </ul>
+          <div class="job__bottom">
+            <div class="job__company">
+              <ion-icon name="musical-notes" class="icon company__icon"></ion-icon>
+              <div>
+                <p class="company__name">Spotify</p>
+                <p class="company__job-time-post">2 days ago</p>
+              </div>
+            </div>
+            <a href="#cta" class="link link--apply">Apply</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="container">
+        <p class="jobs__empty" hidden>
+          <ion-icon name="file-tray-outline"></ion-icon>
+          No open roles in this category right now. Check back soon!
+        </p>
+      </div>
+
+      <div class="jobs__see-jobs container">
+        <a href="#jobs" class="link jobs__link link--underline">See all jobs &rarr;</a>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+      <div class="container section-header">
+        <p class="section-name">Testimonials</p>
+        <h2 class="heading-secondary">Loved by remote workers everywhere</h2>
+      </div>
+
+      <div class="container">
+        <div class="slider reveal">
+          <div class="slider__viewport">
+            <div class="slider__track">
+              <figure class="testimonial">
+                <div class="testimonial__stars">
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                </div>
+                <blockquote class="testimonial__quote">
+                  &ldquo;I moved from Bucharest to Lisbon and kept the same job thanks to snap. The calendar alone saved me from countless time zone headaches.&rdquo;
+                </blockquote>
+                <figcaption class="testimonial__author">
+                  <span class="testimonial__avatar testimonial__avatar--purple">AM</span>
+                  <span>
+                    <span class="testimonial__name">Ana Marin</span>
+                    <span class="testimonial__role">Frontend Developer</span>
+                  </span>
+                </figcaption>
+              </figure>
+
+              <figure class="testimonial">
+                <div class="testimonial__stars">
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                </div>
+                <blockquote class="testimonial__quote">
+                  &ldquo;We hired three senior engineers in under a month. The quality of candidates on snap is honestly better than anywhere else we tried.&rdquo;
+                </blockquote>
+                <figcaption class="testimonial__author">
+                  <span class="testimonial__avatar testimonial__avatar--aqua">JK</span>
+                  <span>
+                    <span class="testimonial__name">James Keller</span>
+                    <span class="testimonial__role">CTO at Databiz</span>
+                  </span>
+                </figcaption>
+              </figure>
+
+              <figure class="testimonial">
+                <div class="testimonial__stars">
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-half"></ion-icon>
+                </div>
+                <blockquote class="testimonial__quote">
+                  &ldquo;Getting paid used to be the worst part of freelancing. Now invoices go out automatically and money lands in my account on time.&rdquo;
+                </blockquote>
+                <figcaption class="testimonial__author">
+                  <span class="testimonial__avatar testimonial__avatar--yellow">SL</span>
+                  <span>
+                    <span class="testimonial__name">Sofia Lopez</span>
+                    <span class="testimonial__role">Freelance Illustrator</span>
+                  </span>
+                </figcaption>
+              </figure>
+
+              <figure class="testimonial">
+                <div class="testimonial__stars">
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                </div>
+                <blockquote class="testimonial__quote">
+                  &ldquo;Our team spans six countries. Reminders and planning keep everyone aligned without a single extra meeting.&rdquo;
+                </blockquote>
+                <figcaption class="testimonial__author">
+                  <span class="testimonial__avatar testimonial__avatar--magenta">DT</span>
+                  <span>
+                    <span class="testimonial__name">Daniel Tan</span>
+                    <span class="testimonial__role">Engineering Lead at Maker</span>
+                  </span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="slider__controls">
+            <button class="btn btn--slider" data-dir="prev" aria-label="Previous testimonial">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </button>
+            <div class="slider__dots"></div>
+            <button class="btn btn--slider" data-dir="next" aria-label="Next testimonial">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+      <div class="container section-header section-header--center">
+        <p class="section-name">Pricing</p>
+        <h2 class="heading-secondary">Simple plans for every stage</h2>
+
+        <div class="billing-toggle">
+          <span class="billing-toggle__label billing-toggle__label--active" data-period="monthly">Monthly</span>
+          <button class="billing-toggle__switch" role="switch" aria-checked="false" aria-label="Toggle yearly billing">
+            <span class="billing-toggle__knob"></span>
+          </button>
+          <span class="billing-toggle__label" data-period="yearly">Yearly</span>
+          <span class="billing-toggle__save">Save 20%</span>
+        </div>
       </div>
-      <div class="jobs__see-jobs container">
-        <a href="#" class="link jobs__link link--underline">See all jobs &rarr;</a>
+
+      <div class="container grid grid--3-col pricing">
+        <article class="pricing-card reveal">
+          <p class="pricing-card__name">Starter</p>
+          <p class="pricing-card__desc">For freelancers getting started.</p>
+          <p class="pricing-card__price">
+            <span class="pricing-card__amount" data-monthly="0" data-yearly="0">$0</span>
+            <span class="pricing-card__period">/ month</span>
+          </p>
+          <ul class="pricing-card__list">
+            <li><ion-icon name="checkmark-outline"></ion-icon> Public profile</li>
+            <li><ion-icon name="checkmark-outline"></ion-icon> 10 applications / month</li>
+            <li><ion-icon name="checkmark-outline"></ion-icon> Todo list &amp; calendar</li>
+            <li class="pricing-card__item--off"><ion-icon name="close-outline"></ion-icon> Priority listing</li>
+          </ul>
+          <a href="#cta" class="link link--plan">Get started</a>
+        </article>
+
+        <article class="pricing-card pricing-card--featured reveal">
+          <span class="pricing-card__badge">Most popular</span>
+          <p class="pricing-card__name">Pro</p>
+          <p class="pricing-card__desc">For professionals who want more.</p>
+          <p class="pricing-card__price">
+            <span class="pricing-card__amount" data-monthly="15" data-yearly="12">$15</span>
+            <span class="pricing-card__period">/ month</span>
+          </p>
+          <ul class="pricing-card__list">
+            <li><ion-icon name="checkmark-outline"></ion-icon> Everything in Starter</li>
+            <li><ion-icon name="checkmark-outline"></ion-icon> Unlimited applications</li>
+            <li><ion-icon name="checkmark-outline"></ion-icon> Reminders &amp; planning</li>
+            <li><ion-icon name="checkmark-outline"></ion-icon> Priority listing</li>
+          </ul>
+          <a href="#cta" class="link link--plan link--plan-featured">Start free trial</a>
+        </article>
+
+        <article class="pricing-card reveal">
+          <p class="pricing-card__name">Team</p>
+          <p class="pricing-card__desc">For companies hiring remotely.</p>
+          <p class="pricing-card__price">
+            <span class="pricing-card__amount" data-monthly="49" data-yearly="39">$49</span>
+            <span class="pricing-card__period">/ month</span>
+          </p>
+          <ul class="pricing-card__list">
+            <li><ion-icon name="checkmark-outline"></ion-icon> 5 active job posts</li>
+            <li><ion-icon name="checkmark-outline"></ion-icon> Shared team workspace</li>
+            <li><ion-icon name="checkmark-outline"></ion-icon> Global payroll</li>
+            <li><ion-icon name="checkmark-outline"></ion-icon> Dedicated support</li>
+          </ul>
+          <a href="#cta" class="link link--plan">Contact sales</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <div class="container faq">
+        <div class="faq__intro">
+          <p class="section-name">FAQ</p>
+          <h2 class="heading-secondary">Questions? We have answers.</h2>
+          <p class="faq__text">Can&rsquo;t find what you&rsquo;re looking for? Reach out to our friendly support team any time.</p>
+          <a href="#cta" class="link link--outline">Contact support &rarr;</a>
+        </div>
+
+        <div class="faq__list">
+          <details class="faq__item" open>
+            <summary class="faq__question">
+              Is snap free to use?
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </summary>
+            <p class="faq__answer">Yes. The Starter plan is free forever and includes a public profile, 10 applications per month and our core productivity tools.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">
+              Which countries can I work from?
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </summary>
+            <p class="faq__answer">Companies on snap hire in over 90 countries. Each listing shows the regions and time zones the employer accepts.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">
+              How do I get paid?
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </summary>
+            <p class="faq__answer">Payments are sent by bank transfer, card or popular wallets in your local currency, usually within two business days.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">
+              Are the job listings verified?
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </summary>
+            <p class="faq__answer">Every company goes through a manual review before posting, and listings are re-checked regularly to keep spam out.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">
+              Can I cancel my plan at any time?
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </summary>
+            <p class="faq__answer">Absolutely. Upgrade, downgrade or cancel whenever you like, with no hidden fees or long-term contracts.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="cta-section">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta__text-box">
+            <h2 class="cta__heading">Ready to find your next remote role?</h2>
+            <p class="cta__text">Join 50,000+ professionals building their careers from anywhere.</p>
+          </div>
+          <form action="#" class="cta__form js-fake-form">
+            <input type="email" name="email" placeholder="Enter your email address" required class="cta__input" aria-label="Email address">
+            <button type="submit" class="btn btn--cta">Get started</button>
+            <p class="form__message" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -260,50 +681,62 @@
   <footer class="footer">
     <div class="footer-section container">
       <div class="footer__row-1">
-        <a href="#">
+        <a href="#top">
           <img src="images/logo.svg" alt="snap logo" class="logo logo--footer">
         </a>
+        <p class="footer__about">Helping people do their best work from wherever they feel most at home.</p>
         <ul class="footer__logos">
-          <li><a href="#" class="link footer--logo">
+          <li><a href="#" class="link footer--logo" aria-label="Instagram">
               <ion-icon name="logo-instagram" class="icon--medium"></ion-icon>
             </a></li>
-          <li><a href="#" class="link footer--logo">
+          <li><a href="#" class="link footer--logo" aria-label="Facebook">
               <ion-icon name="logo-facebook" class="icon--medium"></ion-icon>
             </a></li>
-          <li><a href="#" class="link footer--logo">
+          <li><a href="#" class="link footer--logo" aria-label="Twitter">
               <ion-icon name="logo-twitter" class="icon--medium"></ion-icon>
             </a></li>
+          <li><a href="#" class="link footer--logo" aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin" class="icon--medium"></ion-icon>
+            </a></li>
         </ul>
-        <p class="coppyright">Copyright © 2022 by snap, Inc. All rights reserved.</p>
+        <p class="copyright">Copyright &copy; <span class="year">2022</span> by snap, Inc. All rights reserved.</p>
       </div>
       <div class="footer__row-2">
-        <p class="footer__title">Customer care</p>
+        <p class="footer__title">Company</p>
         <ul class="footer__list">
-          <li><a href="" class="link footer--link link--underline">FAQ</a></li>
-          <li><a href="" class="link footer--link link--underline">My account</a></li>
-          <li><a href="" class="link footer--link link--underline">Contact us</a></li>
-          <li><a href="" class="link footer--link link--underline">Privacy & terms</a></li>
-          <li><a href="" class="link footer--link link--underline">Help center</a></li>
+          <li><a href="#how-it-works" class="link footer--link link--underline">About us</a></li>
+          <li><a href="#testimonials" class="link footer--link link--underline">Our team</a></li>
+          <li><a href="#jobs" class="link footer--link link--underline">Careers</a></li>
+          <li><a href="#faq" class="link footer--link link--underline">Blog</a></li>
         </ul>
       </div>
       <div class="footer__row-3">
+        <p class="footer__title">Customer care</p>
+        <ul class="footer__list">
+          <li><a href="#faq" class="link footer--link link--underline">FAQ</a></li>
+          <li><a href="#pricing" class="link footer--link link--underline">My account</a></li>
+          <li><a href="#cta" class="link footer--link link--underline">Contact us</a></li>
+          <li><a href="#faq" class="link footer--link link--underline">Privacy &amp; terms</a></li>
+          <li><a href="#faq" class="link footer--link link--underline">Help center</a></li>
+        </ul>
+      </div>
+      <div class="footer__row-4">
         <p class="footer__title">Newsletter</p>
         <p class="footer__newsletter">Get the latest resources, news and more.</p>
-        <!-- <form method="get">
-          <input >
-        </form> -->
-        <!-- create form -->
-        <form action="#" class="footer__form">
-          <input type="email" name="email" placeholder="Enter your email adress..." required class="footer__input">
-          <button type="submit" class="btn btn--footer">
-            Subsribe
-          </button>
+        <form action="#" class="footer__form js-fake-form">
+          <input type="email" name="email" placeholder="Enter your email address..." required class="footer__input" aria-label="Email address">
+          <button type="submit" class="btn btn--footer">Subscribe</button>
+          <p class="form__message" aria-live="polite"></p>
         </form>
       </div>
     </div>
   </footer>
 
-  <script src="/scritps/script.js"></script>
+  <a href="#top" class="back-to-top" aria-label="Back to top">
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+  <script src="scripts/script.js" defer></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
